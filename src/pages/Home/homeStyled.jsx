@@ -22,6 +22,7 @@ export const CardsDiv = styled.div`
 //parte dos graficos
 export const GraphicDiv = styled.div`
     width: 100%;
+    min-width: 400px;
     height: auto;
 
     padding: 10px;
@@ -29,9 +30,13 @@ export const GraphicDiv = styled.div`
     display: flex;
     align-items: center;
 
+    @media (max-width: 625px) {
+        flex-direction:  column;
+    }
 `
 export const Index = styled.div`
     width: 23%;
+    min-width: 120px;
     max-width: 250px;
     height: 350px;
 
@@ -76,7 +81,6 @@ export const Index = styled.div`
     }
 
     span {
-        width: 70%;        
         height: 100%;
         
         border-left: 1px solid #ebebeb;
@@ -91,12 +95,46 @@ export const Index = styled.div`
                 
     }
 
+    @media (max-width: 625px) {
+        height: 42px;
+        width: 100%;
+        min-width: 200px;
+        max-width: 600px;
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 10px;
+
+
+        h2 {
+            width: 16%;
+            margin-right: 5px;
+         }
+
+        div{
+            width: 16%;
+            border-left: 1px solid #ebebeb;
+        }
+
+        .dot {
+            width: 10px;
+            margin: 0;
+            margin-left: 5px;
+        }
+        span {
+            padding-left: 10%;
+            font-size: 13px;
+            font-weight: 700;
+            border-left:  0;
+        }
+    }
+
 `
 export const ChartDiv = styled.div`
-    width: 600px;
+    width: 100%;
+    max-width: 500px;
     height: 350px;
 
-    margin-left: 10px;
+    margin-left: 1%;
     background-color: #ffffffd3;
     
     display: flex;
@@ -130,6 +168,16 @@ export const ChartDiv = styled.div`
         color: white;
         font-size: 15px;
         font-weight: 700;
+    }
+
+    @media (max-width: 625px) {
+        margin-left: 0;
+    }
+
+    @media (max-width: 450px) {
+        .recharts-surface {
+        width: 80%;
+    }
     }
    
 `
@@ -175,4 +223,19 @@ export const TableForm = styled.table`
         margin-right: 10px;
         fill: ${props => props.color};
     }
+
+    @media (max-width: 625px) {
+        td {
+            font-size: 10px;
+            padding: 0 6px;
+        }
+    }
+    @media (max-width: 455px) {
+        td {
+            font-size: 8px;
+            padding: 0 4px;
+        }
+    }
+
+
 `

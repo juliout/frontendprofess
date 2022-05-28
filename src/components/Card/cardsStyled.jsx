@@ -14,6 +14,7 @@ export const CardContent = styled.div`
     -webkit-box-shadow: 4px 4px 8px -5px #D1D1D1; 
     box-shadow: 4px 4px 8px -5px #D1D1D1;
     margin-left: 1%;
+    margin-bottom: 5px;
 
     h2{
         width: 100%;
@@ -39,4 +40,14 @@ export const CardContent = styled.div`
         display: flex;
         align-items: center;
     }
+
+    @media (max-width: 625px) {
+        height: 70px;
+        
+        span {
+            font-size: 15px;
+        }
+    }
+
+
 `

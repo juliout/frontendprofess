@@ -86,13 +86,13 @@ export default function Home() {
         <ChartDiv>
           <h2> FATURAMENTO DO ANO </h2>
           <ResponsiveContainer width='100%' height='90%'>
-            <BarChart width={200} height={100} data={data}>
+            <BarChart width={60} data={data}>
               <CartesianGrid strokeDasharray="1 3" />
               <Tooltip content={ <CustomTooltip />} />              
-              <Bar dataKey="saldo" width='30px' fill='red'>
+              <Bar dataKey="saldo" fill='red'>
               {
                 data.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={allCollors[index]}  />
+                  <Cell key={`cell-${index}`} fill={allCollors[index]} width={70} />
                 ))
               }
               </Bar>
